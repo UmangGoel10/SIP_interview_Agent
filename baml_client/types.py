@@ -42,6 +42,7 @@ def all_succeeded(checks: typing.Dict[CheckName, Check]) -> bool:
 
 class Intent(str, Enum):
     ProbeDepth = "ProbeDepth"
+    FollowUp = "FollowUp"
     Clarify = "Clarify"
     Challenge = "Challenge"
     MoveOn = "MoveOn"
@@ -55,7 +56,7 @@ class InterviewStage(str, Enum):
     WrapUp = "WrapUp"
 
 # #########################################################################
-# Generated classes (9)
+# Generated classes (8)
 # #########################################################################
 
 class AnalysisResponse(BaseModel):
@@ -68,6 +69,7 @@ class AnswerAnalysis(BaseModel):
     correctness: int
     depth: int
     review: str
+    uncovered_gaps: typing.List[str]
 
 class InterviewDecision(BaseModel):
     intent: Intent
@@ -116,12 +118,6 @@ class QuestionResponse(BaseModel):
     question: str
     question_id: str
     parent_question_id: str
-
-class Resume(BaseModel):
-    name: str
-    email: str
-    experience: typing.List[str]
-    skills: typing.List[str]
 
 # #########################################################################
 # Generated type aliases (0)

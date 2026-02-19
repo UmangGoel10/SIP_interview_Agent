@@ -8,6 +8,7 @@ class Project {
 
 enum Intent {
   ProbeDepth
+  FollowUp
   Clarify
   Challenge
   MoveOn
@@ -27,7 +28,7 @@ class AnswerAnalysis {
   correctness int
   depth int
   review string
-
+  uncovered_gaps string[]
 }
 class ProjectPastContext {
   weak_areas string[]
@@ -136,9 +137,12 @@ function GenerateQuestion(
   Active Project: {{ project.name }}
   Stack: {{ project.claimed_stack | join(", ") }}
   Complexity: {{ project.complexity }}/10
+  If this is the first/root question, set parent_question_id equal to question_id.
+  Never return null.
+
 
   {# ================= STAGE: INTRO ================= #}
-  {% if state.stage == "INTRO" %}
+  {% if state.stage == InterviewStage.Intro %}
     TASK:
     Ask ONE open-ended, conversational question that invites the candidate to:
     - Explain what the project does
@@ -165,31 +169,36 @@ function GenerateQuestion(
     Questions: {{ total_q }}/{{ max_q }}
     Coverage: {{ project.overall_analysis.coverage_score * 100 | round }}%
     
-    {% if project.unanswered_concepts %}
+    {% if project.overall_analysis.unanswered_concepts %}
     Untested: 
-    {%- for concept in project.unanswered_concepts -%}
+    {%- for concept in project.overall_analysis.unanswered_concepts -%}
         {{ concept }}{% if not loop.last %}, {% endif %}
     {%- endfor -%}
     {% endif %}
     
-    {% if project.weak_areas %}
+    {% if project.overall_analysis.weak_areas %}
     Weak Areas: 
-    {%- for area in project.weak_areas -%}
+    {%- for area in project.overall_analysis.weak_areas -%}
         {{ area }}{% if not loop.last %}, {% endif %}
     {%- endfor -%}
     {% endif %}
 
-    {% if project.strong_areas %}
+    {% if project.overall_analysis.strong_areas %}
     Strong Areas: 
-    {%- for area in project.strong_areas -%}
+    {%- for area in project.overall_analysis.strong_areas -%}
         {{ area }}{% if not loop.last %}, {% endif %}
     {%- endfor -%}
     {% endif %}
 
     {% if total_q >= 3 %}
       Recent Questions (last 3):
-      {% for  q in project.question_ids | reverse | slice(3) %}
-      - {{ q.value }}
+      {% set counter = 0 %}
+      {% for qid in project.question_ids %}
+      {% if counter < 3 %}
+      {% set qtext = project.question_ids[qid] %}
+      - {{ qtext }}
+      {% set counter = counter + 1 %}
+      {% endif %}
       {% endfor %}
     {% endif %}
 
@@ -217,10 +226,11 @@ function GenerateQuestion(
     {{ project.question_ids[qid] }}
 
     Answer Analysis:
-    - Strengths: {{ analysis.strengths }}
-    - Gaps: {{ analysis.gaps }}
-    - Weaknesses: {{ analysis.weaknesses }}
-    - Confidence: {{ analysis.confidence }}
+    - Clarity: {{ analysis.clarity }}/10
+    - Correctness: {{ analysis.correctness }}/10
+    - Depth: {{ analysis.depth }}/10
+    - Review: {{ analysis.review }}
+    - Gaps: {{ analysis.uncovered_gaps | join(", ") }}
 
     TASK:
     Ask ONE conversational follow-up that:
@@ -284,6 +294,7 @@ function AnalyzeAnswer(question: string, answer: string, state: InterviewState) 
 
     TASK 2 - Decide Next Action:
     - **ProbeDepth**: Good answer, needs deeper implementation details
+    - **FollowUp**: Answer has gaps or weaknesses worth probing in a targeted follow-up question
     - **Clarify**: Unclear, ambiguous, needs precision
     - **Challenge**: Incorrect, inconsistent, or needs validation
     - **MoveOn**: Satisfactory and complete, new aspect needed
@@ -302,36 +313,28 @@ function AnalyzeAnswer(question: string, answer: string, state: InterviewState) 
     {{ _.role('user') }}
 
     {% set project = state.projects[state.active_project_id] %}
-    {# Initialize the variable #}
-    {% set total_q = 0 %}
-    {% for id in project.question_ids %}
-      {# Incrementing logic depends on your BAML runtime; usually, 
-        you just iterate to display. If you need the number in the prompt: #}
-      {% if loop.last %}{% set total_q = loop.index %}{% endif %}
-    {% endfor %}
+    {% set total_q = project.question_ids | length %}
 
-Total number of questions: {{ total_q }}
-
-Total Questions: {{ total_q }}
+    Total Questions: {{ total_q }}
 
     {% set max_q = state.max_questions_per_project %}
     {% set global_urgency = state.turn_index / state.max_turns %}
 
-    Covereage: {{ (project.overall_analysis.coverage_score * 100) | round }}%
+    Coverage: {{ (project.overall_analysis.coverage_score * 100) | round }}%
     **Budget Status:**
     Turns: {{ state.turn_index }}/{{ state.max_turns }} ({{ (global_urgency * 100) | round }}% used)
     Questions this project: {{ total_q }}/{{ max_q }}
     {% if state.active_question_id %}
-    {% set current_root = project.parent_questions.get(state.active_question_id, state.active_question_id) %}
-    Followups on current thread: {{ project.followup_count.get(current_root, 0) }}/{{ state.max_followups_per_question }}
+    {% set current_root = project.parent_questions[state.active_question_id] | default(state.active_question_id) %}
+    Followups on current thread: {{ project.followup_count[current_root] | default(0) }}/{{ state.max_followups_per_question }}
     {% endif %}
 
     **Decision Guidance:**
     {% if total_q >= max_q * 0.8 %}
       Question budget nearly exhausted ({{ total_q }}/{{ max_q }}) - PREFER MoveOn over followups
     {% endif %}
-    {% if project.coverage_score >= 0.75 %}
-      Coverage satisfactory ({{ (project.coverage_score * 100) | round }}%) - CONSIDER SwitchProject, don't exhaust question budget
+    {% if project.overall_analysis.coverage_score >= 0.75 %}
+      Coverage satisfactory ({{ (project.overall_analysis.coverage_score * 100) | round }}%) - CONSIDER SwitchProject, don't exhaust question budget
     {% endif %}
     {% if global_urgency >= 0.8 %}
       Global time critical ({{ (global_urgency * 100) | round }}% used) - AVOID deep followups, prioritize breadth
@@ -342,18 +345,19 @@ Total Questions: {{ total_q }}
 
     **Project: {{ project.name }}**
     Claimed Stack: {{ project.claimed_stack | join(", ") }}
-    Current Coverage: {{ (project.coverage_score * 100) | round }}%
-    {% if project.weak_areas | length > 0 %}Current Weak: {{ project.weak_areas | join(", ") }}{% endif %}
-    {% if project.strong_areas | length > 0 %}Current Strong: {{ project.strong_areas | join(", ") }}{% endif %}
-    {% if project.unanswered_concepts | length > 0 %}Currently Untested: {{ project.unanswered_concepts | join(", ") }}{% endif %}
+    Current Coverage: {{ (project.overall_analysis.coverage_score * 100) | round }}%
+    {% if project.overall_analysis.weak_areas | length > 0 %}Current Weak: {{ project.overall_analysis.weak_areas | join(", ") }}{% endif %}
+    {% if project.overall_analysis.strong_areas | length > 0 %}Current Strong: {{ project.overall_analysis.strong_areas | join(", ") }}{% endif %}
+    {% if project.overall_analysis.unanswered_concepts | length > 0 %}Currently Untested: {{ project.overall_analysis.unanswered_concepts | join(", ") }}{% endif %}
 
     {% if project.per_question_answer_analysis | length > 0 %}
     **Accumulated Gaps from Previous Answers:**
-    {% set all_gaps = [] %}
-    {% for var in project.per_question_answer_analysis %}
-    {% set _ = all_gaps.extend(var.value.uncovered_gaps) %}
+    {% for qid in project.per_question_answer_analysis %}
+    {% set analysis = project.per_question_answer_analysis[qid] %}
+    {% if analysis.uncovered_gaps | length > 0 %}
+    - {{ analysis.uncovered_gaps | join(", ") }}
+    {% endif %}
     {% endfor %}
-    {% if all_gaps | length > 0 %}{{ all_gaps | unique | join(", ") }}{% endif %}
     {% endif %}
 
     **Current Question:**
@@ -388,35 +392,35 @@ function FinalAnalysis(state: InterviewState) -> string {
     **Interview Summary:**
     Total Turns: {{ state.turn_index }}/{{ state.max_turns }}
     {% set completed_count = 0 %}
-    {% for proj_id in state.projects_done.keys() %}
+    {% for proj_id in state.projects_done %}
     {% if state.projects_done[proj_id] %}{% set completed_count = completed_count + 1 %}{% endif %}
     {% endfor %}
-    Projects Covered: {{ completed_count }}/{{ state.projects.keys() | length }}
+    Projects Covered: {{ completed_count }}/{{ state.projects | length }}
 
-    {% for proj_id in state.projects.keys() %}
+    {% for proj_id in state.projects %}
     {% set project = state.projects[proj_id] %}
     ---
     **Project {{ loop.index }}: {{ project.name }}**
     Complexity: {{ project.complexity }}/10
     Claimed Stack: {{ project.claimed_stack | join(", ") }}
     
-    Coverage: {{ (project.coverage_score * 100) | round }}%
-    Questions Asked: {{ project.question_ids.keys() | length }}
+    Coverage: {{ (project.overall_analysis.coverage_score * 100) | round }}%
+    Questions Asked: {{ project.question_ids | length }}
     
-    {% if project.strong_areas | length > 0 %}
-    Strong Areas: {{ project.strong_areas | join(", ") }}
+    {% if project.overall_analysis.strong_areas | length > 0 %}
+    Strong Areas: {{ project.overall_analysis.strong_areas | join(", ") }}
     {% endif %}
     
-    {% if project.weak_areas | length > 0 %}
-    Weak Areas: {{ project.weak_areas | join(", ") }}
+    {% if project.overall_analysis.weak_areas | length > 0 %}
+    Weak Areas: {{ project.overall_analysis.weak_areas | join(", ") }}
     {% endif %}
     
-    {% if project.unanswered_concepts | length > 0 %}
-    Untested: {{ project.unanswered_concepts | join(", ") }}
+    {% if project.overall_analysis.unanswered_concepts | length > 0 %}
+    Untested: {{ project.overall_analysis.unanswered_concepts | join(", ") }}
     {% endif %}
 
     **Answer Quality Distribution:**
-    {% for qid in project.per_question_answer_analysis.keys() %}
+    {% for qid in project.per_question_answer_analysis %}
     {% set analysis = project.per_question_answer_analysis[qid] %}
     Q{{ loop.index }}: Clarity={{ analysis.clarity }}/10, Correctness={{ analysis.correctness }}/10, Depth={{ analysis.depth }}/10
     Review: {{ analysis.review }}
@@ -428,20 +432,21 @@ function FinalAnalysis(state: InterviewState) -> string {
     {% endfor %}
 
     **Cross-Project Patterns:**
-    {% set all_weak = [] %}
-    {% set all_strong = [] %}
-    {% for proj_id in state.projects.keys() %}
+    Recurring Weaknesses:
+    {% for proj_id in state.projects %}
     {% set project = state.projects[proj_id] %}
-    {% for weak in project.weak_areas %}
-    {% set _ = all_weak.append(weak) %}
-    {% endfor %}
-    {% for strong in project.strong_areas %}
-    {% set _ = all_strong.append(strong) %}
-    {% endfor %}
+    {% if project.overall_analysis.weak_areas | length > 0 %}
+    {{ project.overall_analysis.weak_areas | join(", ") }}
+    {% endif %}
     {% endfor %}
     
-    Recurring Weaknesses: {{ all_weak | unique | join(", ") if all_weak | length > 0 else "None" }}
-    Consistent Strengths: {{ all_strong | unique | join(", ") if all_strong | length > 0 else "None" }}
+    Consistent Strengths:
+    {% for proj_id in state.projects %}
+    {% set project = state.projects[proj_id] %}
+    {% if project.overall_analysis.strong_areas | length > 0 %}
+    {{ project.overall_analysis.strong_areas | join(", ") }}
+    {% endif %}
+    {% endfor %}
     "#
 }
 
@@ -495,7 +500,7 @@ function FinalAnalysis(state: InterviewState) -> string {
 //   }
 // }
 
-test TestName {
+test TestGenerateQuestion {
   functions [GenerateQuestion]
   args {
     state {
@@ -573,7 +578,7 @@ test TestName {
   }
 }
 
-test TestName {
+test TestAnalyzeAnswer {
   functions [AnalyzeAnswer]
   args {
     question #"
@@ -591,7 +596,7 @@ test TestName {
         projects_done {
         "a_string" true
       }
-        active_project_id null
+        active_project_id "a_string"
         active_question_id null
         projects {
         "a_string" {

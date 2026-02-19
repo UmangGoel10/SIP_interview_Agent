@@ -13,7 +13,6 @@
 import typing
 import typing_extensions
 
-import baml_py
 
 from . import stream_types, types
 from .runtime import DoNotUseDirectlyCallManager, BamlCallOptions
@@ -35,12 +34,6 @@ class LlmResponseParser:
     ) -> typing.List["types.Project"]:
         __result__ = self.__options.merge_options(baml_options).parse_response(function_name="ExtractProjects", llm_response=llm_response, mode="request")
         return typing.cast(typing.List["types.Project"], __result__)
-
-    def ExtractResume(
-        self, llm_response: str, baml_options: BamlCallOptions = {},
-    ) -> types.Resume:
-        __result__ = self.__options.merge_options(baml_options).parse_response(function_name="ExtractResume", llm_response=llm_response, mode="request")
-        return typing.cast(types.Resume, __result__)
 
     def FinalAnalysis(
         self, llm_response: str, baml_options: BamlCallOptions = {},
@@ -73,12 +66,6 @@ class LlmStreamParser:
     ) -> typing.List["stream_types.Project"]:
         __result__ = self.__options.merge_options(baml_options).parse_response(function_name="ExtractProjects", llm_response=llm_response, mode="stream")
         return typing.cast(typing.List["stream_types.Project"], __result__)
-
-    def ExtractResume(
-        self, llm_response: str, baml_options: BamlCallOptions = {},
-    ) -> stream_types.Resume:
-        __result__ = self.__options.merge_options(baml_options).parse_response(function_name="ExtractResume", llm_response=llm_response, mode="stream")
-        return typing.cast(stream_types.Resume, __result__)
 
     def FinalAnalysis(
         self, llm_response: str, baml_options: BamlCallOptions = {},

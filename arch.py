@@ -53,8 +53,8 @@ class ProjectState(TypedDict):
 
 class InterviewDecision(TypedDict):
     intent: Literal[
-
         "ProbeDepth",
+        "FollowUp",
         "Clarify",
         "Challenge",
         "MoveOn",  
@@ -92,6 +92,17 @@ def node1_question_generator(state: InterviewState) -> InterviewState:
     # #endregion
     project = state["projects"][state["active_project_id"]]
     decision = state["decision"]
+
+    # Hard guard: enforce question budget per project
+    if len(project["question_ids"]) >= state["max_questions_per_project"]:
+        state["decision"] = {
+            "intent": "SwitchProject",
+            "urgency": 1.0,
+            "confidence": 1.0,
+            "rationale": "Question budget exhausted for this project"
+        }
+        return state
+
     #deep copy of state
     state2 = state.copy()
     #here state is a dict
@@ -156,7 +167,15 @@ def node1_question_generator(state: InterviewState) -> InterviewState:
 
 
 def node2_answer_input(state: InterviewState) -> InterviewState:
+    # If the generator decided to switch project or wrap up, skip input
+    if state["decision"]["intent"] in ["SwitchProject", "WrapUp"]:
+        return state
+
     project = state["projects"][state["active_project_id"]]
+    # Ensure active_question_id belongs to the current project
+    if not state["active_question_id"] or state["active_question_id"] not in project["question_ids"]:
+         return state
+
     q = project["question_ids"][state["active_question_id"]]
 
     state["turn_index"] += 1
@@ -188,10 +207,10 @@ def node3_answer_analysis(state: InterviewState) -> InterviewState:
     
     # Update project state with results
     project["per_question_answer_analysis"][qid] = res.analysis
-    project["weak_areas"] = res.pastContext.weak_areas
-    project["strong_areas"] = res.pastContext.strong_areas
-    project["unanswered_concepts"] = res.pastContext.unanswered_concepts
-    project["coverage_score"] = res.pastContext.coverage_score
+    project["overall_analysis"]["weak_areas"] = res.pastContext.weak_areas
+    project["overall_analysis"]["strong_areas"] = res.pastContext.strong_areas
+    project["overall_analysis"]["unanswered_concepts"] = res.pastContext.unanswered_concepts
+    project["overall_analysis"]["coverage_score"] = res.pastContext.coverage_score
     
     state["decision"] = res.decision.model_dump()
     
@@ -205,6 +224,8 @@ def node3_answer_analysis(state: InterviewState) -> InterviewState:
     if state["stage"] == "FollowUp" and state["decision"]["intent"] == "MoveOn":
         state["stage"] = "DeepDive"
     elif state["stage"] == "Intro" and state["decision"]["intent"] in ["Challenge", "Clarify"]:
+        state["stage"] = "FollowUp"
+    elif state["decision"]["intent"] == "FollowUp":
         state["stage"] = "FollowUp"
     else:
         state["stage"] = "DeepDive"
@@ -241,6 +262,23 @@ def node3_answer_analysis(state: InterviewState) -> InterviewState:
                     #f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"A","location":"arch.py:156","message":"after_project_switch","data":{"new_project_id":proj_id,"stage_after_switch":state["stage"],"decision_after_switch":state["decision"]["intent"]},"timestamp":int(__import__("time").time()*1000)})+'\n')
                 # #endregion
                 break
+
+        # Guard: if all projects are done, force WrapUp to prevent crash
+        if state["active_project_id"] is None:
+            state["decision"] = {
+                "intent": "WrapUp",
+                "urgency": 1.0,
+                "confidence": 1.0,
+                "rationale": "All projects covered"
+            }
+
+    # Hard guard: enforce followup limit
+    if state["decision"]["intent"] == "FollowUp" and state.get("active_question_id"):
+        project = state["projects"][state["active_project_id"]]
+        root = project["parent_questions"].get(state["active_question_id"], state["active_question_id"])
+        if project["followup_count"].get(root, 0) >= state["max_followups_per_question"]:
+            state["decision"]["intent"] = "MoveOn"
+            state["decision"]["rationale"] = "Followup limit reached, moving on"
 
     # Hard safety: force wrapup if max turns reached
     if state["turn_index"] >= state["max_turns"]:
@@ -364,13 +402,16 @@ def initialise(projects: List[Dict[str, Any]]) -> InterviewState:
 
 
 
-if __name__ == "__main__":   
-    file_path = "Primary_revised2.pdf"  
+if __name__ == "__main__":
+    import asyncio
+    from dsa_client import DSABotClient
+
+    file_path = "Primary_revised2.pdf"
     markdown = convert_resume_to_markdown(file_path)
     if markdown:
         print("Markdown Conversion Successful:")
         projects = b.ExtractProjects(markdown)
-        projects.sort(#sort by complexity descending
+        projects.sort(  # sort by complexity descending
             key=lambda x: x.complexity,
             reverse=True
         )
@@ -378,12 +419,23 @@ if __name__ == "__main__":
         if not projects:
             print("No projects found.")
             exit(1)
-        
+
         initial_state = initialise(projects)
-        #run interview
-        final_state = compiled_graph.invoke(initial_state)
-        print("\n===== INTERVIEW COMPLETE =====\n")
-        
+        # Run resume/project interview
+        final_state = compiled_graph.invoke(
+            initial_state, 
+            config={"recursion_limit": 100}
+        )
+        print("\n===== RESUME INTERVIEW COMPLETE =====\n")
+
+        # ── Optional DSA round ────────────────────────────────────────────
+        answer = input("\nWould you like to continue with a DSA coding round? (y/n): ").strip().lower()
+        if answer == "y":
+            dsa_client = DSABotClient()
+            asyncio.run(dsa_client.run_interactive_session())
+        else:
+            print("\n👋  All done! Good luck with your interviews.")
+
     else:
         print("Markdown Conversion Failed.")
 

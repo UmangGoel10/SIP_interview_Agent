@@ -20,7 +20,7 @@ from .globals import DO_NOT_USE_DIRECTLY_UNLESS_YOU_KNOW_WHAT_YOURE_DOING_RUNTIM
 class TypeBuilder(type_builder.TypeBuilder):
     def __init__(self):
         super().__init__(classes=set(
-          ["AnalysisResponse","AnswerAnalysis","InterviewDecision","InterviewState","Project","ProjectPastContext","ProjectState","QuestionResponse","Resume",]
+          ["AnalysisResponse","AnswerAnalysis","InterviewDecision","InterviewState","Project","ProjectPastContext","ProjectState","QuestionResponse",]
         ), enums=set(
           ["Intent","InterviewStage",]
         ), runtime=DO_NOT_USE_DIRECTLY_UNLESS_YOU_KNOW_WHAT_YOURE_DOING_RUNTIME)
@@ -39,7 +39,7 @@ class TypeBuilder(type_builder.TypeBuilder):
 
 
     # #########################################################################
-    # Generated classes 9
+    # Generated classes 8
     # #########################################################################
 
     @property
@@ -74,10 +74,6 @@ class TypeBuilder(type_builder.TypeBuilder):
     def QuestionResponse(self) -> "QuestionResponseViewer":
         return QuestionResponseViewer(self)
 
-    @property
-    def Resume(self) -> "ResumeViewer":
-        return ResumeViewer(self)
-
 
 
 # #########################################################################
@@ -88,7 +84,7 @@ class IntentAst:
     def __init__(self, tb: type_builder.TypeBuilder):
         _tb = tb._tb # type: ignore (we know how to use this private attribute)
         self._bldr = _tb.enum("Intent")
-        self._values: typing.Set[str] = set([  "ProbeDepth",  "Clarify",  "Challenge",  "MoveOn",  "SwitchProject",  "WrapUp",  ])
+        self._values: typing.Set[str] = set([  "ProbeDepth",  "FollowUp",  "Clarify",  "Challenge",  "MoveOn",  "SwitchProject",  "WrapUp",  ])
         self._vals = IntentValues(self._bldr, self._values)
 
     def type(self) -> baml_py.FieldType:
@@ -118,6 +114,10 @@ class IntentValues:
     @property
     def ProbeDepth(self) -> type_builder.EnumValueViewer:
         return type_builder.EnumValueViewer(self.__bldr.value("ProbeDepth"))
+    
+    @property
+    def FollowUp(self) -> type_builder.EnumValueViewer:
+        return type_builder.EnumValueViewer(self.__bldr.value("FollowUp"))
     
     @property
     def Clarify(self) -> type_builder.EnumValueViewer:
@@ -194,7 +194,7 @@ class InterviewStageValues:
 
 
 # #########################################################################
-# Generated classes 9
+# Generated classes 8
 # #########################################################################
 
 class AnalysisResponseAst:
@@ -248,7 +248,7 @@ class AnswerAnalysisAst:
     def __init__(self, tb: type_builder.TypeBuilder):
         _tb = tb._tb # type: ignore (we know how to use this private attribute)
         self._bldr = _tb.class_("AnswerAnalysis")
-        self._properties: typing.Set[str] = set([  "clarity",  "correctness",  "depth",  "review",  ])
+        self._properties: typing.Set[str] = set([  "clarity",  "correctness",  "depth",  "review",  "uncovered_gaps",  ])
         self._props = AnswerAnalysisProperties(self._bldr, self._properties)
 
     def type(self) -> baml_py.FieldType:
@@ -291,6 +291,10 @@ class AnswerAnalysisProperties:
     @property
     def review(self) -> type_builder.ClassPropertyViewer:
         return type_builder.ClassPropertyViewer(self.__bldr.property("review"))
+    
+    @property
+    def uncovered_gaps(self) -> type_builder.ClassPropertyViewer:
+        return type_builder.ClassPropertyViewer(self.__bldr.property("uncovered_gaps"))
     
     
 
@@ -645,57 +649,6 @@ class QuestionResponseProperties:
     @property
     def parent_question_id(self) -> type_builder.ClassPropertyViewer:
         return type_builder.ClassPropertyViewer(self.__bldr.property("parent_question_id"))
-    
-    
-
-
-class ResumeAst:
-    def __init__(self, tb: type_builder.TypeBuilder):
-        _tb = tb._tb # type: ignore (we know how to use this private attribute)
-        self._bldr = _tb.class_("Resume")
-        self._properties: typing.Set[str] = set([  "name",  "email",  "experience",  "skills",  ])
-        self._props = ResumeProperties(self._bldr, self._properties)
-
-    def type(self) -> baml_py.FieldType:
-        return self._bldr.field()
-
-    @property
-    def props(self) -> "ResumeProperties":
-        return self._props
-
-
-class ResumeViewer(ResumeAst):
-    def __init__(self, tb: type_builder.TypeBuilder):
-        super().__init__(tb)
-
-    
-    def list_properties(self) -> typing.List[typing.Tuple[str, type_builder.ClassPropertyViewer]]:
-        return [(name, type_builder.ClassPropertyViewer(self._bldr.property(name))) for name in self._properties]
-    
-
-
-class ResumeProperties:
-    def __init__(self, bldr: baml_py.ClassBuilder, properties: typing.Set[str]):
-        self.__bldr = bldr
-        self.__properties = properties # type: ignore (we know how to use this private attribute) # noqa: F821
-
-    
-    
-    @property
-    def name(self) -> type_builder.ClassPropertyViewer:
-        return type_builder.ClassPropertyViewer(self.__bldr.property("name"))
-    
-    @property
-    def email(self) -> type_builder.ClassPropertyViewer:
-        return type_builder.ClassPropertyViewer(self.__bldr.property("email"))
-    
-    @property
-    def experience(self) -> type_builder.ClassPropertyViewer:
-        return type_builder.ClassPropertyViewer(self.__bldr.property("experience"))
-    
-    @property
-    def skills(self) -> type_builder.ClassPropertyViewer:
-        return type_builder.ClassPropertyViewer(self.__bldr.property("skills"))
     
     
 

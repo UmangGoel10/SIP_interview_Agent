@@ -4,7 +4,7 @@ from docling.document_converter import DocumentConverter
 from docling.exceptions import ConversionError
 
 # Set up logging to track what happens during execution
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 def convert_resume_to_markdown(file_path):
@@ -43,7 +43,7 @@ def convert_resume_to_markdown(file_path):
 
     except Exception as e:
         # Catch-all for unexpected system errors (Memory, Permissions, etc.)
-        logger.error(f"An unexpected error occurred: {e.with_traceback()}")
+        logger.exception("An unexpected error occurred")
         return None
 
 

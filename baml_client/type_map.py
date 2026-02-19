@@ -40,9 +40,6 @@ type_map = {
     "types.QuestionResponse": types.QuestionResponse,
     "stream_types.QuestionResponse": stream_types.QuestionResponse,
 
-    "types.Resume": types.Resume,
-    "stream_types.Resume": stream_types.Resume,
-
 
     "types.Intent": types.Intent,
 
