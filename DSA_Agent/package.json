@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "openai": "^6.15.0",
+    "uuid": "^13.0.0"
+  },
+  "name": "ai-interview-bot",
+  "version": "1.0.0",
+  "description": "Building...",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnavGupta-codes/AI-Interview-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ArnavGupta-codes/AI-Interview-Bot/issues"
+  },
+  "homepage": "https://github.com/ArnavGupta-codes/AI-Interview-Bot#readme"
+}

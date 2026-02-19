@@ -1,0 +1,362 @@
+Topic Name,Sub-topic Name,Difficulty,LeetCode Question,LeetCode Link
+
+Sorting Algorithms,Basic Sorting Understanding,Easy,Merge Sorted Array,https://leetcode.com/problems/merge-sorted-array
+Sorting Algorithms,Basic Sorting Understanding,Medium,Sort Colors (DNF),https://leetcode.com/problems/sort-colors
+Sorting Algorithms,Basic Sorting Understanding,Hard *,Reverse Pairs,https://leetcode.com/problems/reverse-pairs
+Sorting Algorithms,Basic Sorting Understanding,Hard *,Count of Smaller Numbers After Self,https://leetcode.com/problems/count-of-smaller-numbers-after-self
+Sorting Algorithms,Basic Sorting Understanding,Hard *,Maximum Gap,https://leetcode.com/problems/maximum-gap
+Sorting Algorithms,Basic Sorting Understanding,Hard *,Kth Smallest Pair Distance,https://leetcode.com/problems/find-k-th-smallest-pair-distance
+Sorting Algorithms,Basic Sorting Understanding,Hard *,Median of Two Sorted Arrays,https://leetcode.com/problems/median-of-two-sorted-arrays
+Array Manipulation,Basic Array Operations,Easy,Remove Duplicates from Sorted Array,https://leetcode.com/problems/remove-duplicates-from-sorted-array
+Array Manipulation,Basic Array Operations,Medium,Rotate Array,https://leetcode.com/problems/rotate-array
+Array Manipulation,Basic Array Operations,Easy,Missing Number,https://leetcode.com/problems/missing-number
+Array Manipulation,Basic Array Operations,Easy,Move Zeroes,https://leetcode.com/problems/move-zeroes
+Array Manipulation,Basic Array Operations,Hard *,First Missing Positive,https://leetcode.com/problems/first-missing-positive
+Array Manipulation,Basic Array Operations,Medium *,Subarray Sum Equals K,https://leetcode.com/problems/subarray-sum-equals-k
+Array Manipulation,Basic Array Operations,Medium *,Longest Consecutive Sequence,https://leetcode.com/problems/longest-consecutive-sequence
+Array Manipulation,Basic Array Operations,Medium *,Game of Life,https://leetcode.com/problems/game-of-life
+Array Manipulation,Basic Array Operations,Hard *,Insert Interval,https://leetcode.com/problems/insert-interval
+Array Manipulation,Two Pointers Pattern,Easy,Two Sum,https://leetcode.com/problems/two-sum
+Array Manipulation,Two Pointers Pattern,Medium,3Sum,https://leetcode.com/problems/3sum
+Array Manipulation,Two Pointers Pattern,Medium,4Sum,https://leetcode.com/problems/4sum
+Array Manipulation,Two Pointers Pattern,Medium,Container With Most Water,https://leetcode.com/problems/container-with-most-water
+Array Manipulation,Two Pointers Pattern,Medium,Remove Duplicates from Sorted Array II,https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii
+Array Manipulation,Two Pointers Pattern,Hard *,Trapping Rain Water,https://leetcode.com/problems/trapping-rain-water
+Array Manipulation,Two Pointers Pattern,Medium *,Longest Mountain in Array,https://leetcode.com/problems/longest-mountain-in-array
+Array Manipulation,Two Pointers Pattern,Hard *,Shortest Subarray with Sum ≥ K,https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k
+Array Manipulation,Two Pointers Pattern,Hard *,Trapping Rain Water II,https://leetcode.com/problems/trapping-rain-water-ii
+Array Manipulation,Two Pointers Pattern,Medium *,Minimum Size Subarray Sum,https://leetcode.com/problems/minimum-size-subarray-sum
+Array Manipulation,Sliding Window Pattern,Medium *,Permutation in String,https://leetcode.com/problems/permutation-in-string
+Array Manipulation,Sliding Window Pattern,Hard *,Minimum Window Subsequence,https://leetcode.com/problems/minimum-window-subsequence
+Array Manipulation,Sliding Window Pattern,Hard *,Substring with Concatenation of All Words,https://leetcode.com/problems/substring-with-concatenation-of-all-words
+Array Manipulation,Sliding Window Pattern,Medium *,Longest Substring with At Most K Distinct Characters,https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters
+Array Manipulation,Sliding Window Pattern,Medium *,Longest Substring with At Least K Repeating Characters,https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters
+Array Manipulation,Prefix Sum Pattern,Medium,Subarray Sum Equals K,https://leetcode.com/problems/subarray-sum-equals-k
+Array Manipulation,Prefix Sum Pattern,Medium,Maximum Subarray (Kadane's),https://leetcode.com/problems/maximum-subarray
+Array Manipulation,Prefix Sum Pattern,Medium,Product of Array Except Self,https://leetcode.com/problems/product-of-array-except-self
+Array Manipulation,Prefix Sum Pattern,Medium *,Continuous Subarray Sum,https://leetcode.com/problems/continuous-subarray-sum
+Array Manipulation,Prefix Sum Pattern,Medium *,Subarray Sums Divisible by K,https://leetcode.com/problems/subarray-sums-divisible-by-k
+Array Manipulation,Prefix Sum Pattern,Medium *,Maximum Size Subarray Sum = k,https://leetcode.com/problems/maximum-size-subarray-sum-equals-k
+Array Manipulation,Prefix Sum Pattern,Hard *,Split Array with Equal Sum,https://leetcode.com/problems/split-array-with-equal-sum
+Array Manipulation,Prefix Sum Pattern,Hard *,Maximum Sum of 3 Non-Overlapping Subarrays,https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays
+Array Manipulation,Advanced Array Problems,Hard,Trapping Rain Water,https://leetcode.com/problems/trapping-rain-water
+Array Manipulation,Advanced Array Problems,Hard,Minimum Window Substring,https://leetcode.com/problems/minimum-window-substring
+Array Manipulation,Advanced Array Problems,Hard,Sliding Window Maximum,https://leetcode.com/problems/sliding-window-maximum
+Array Manipulation,Advanced Array Problems,Medium,Longest Substring Without Repeating Characters,https://leetcode.com/problems/longest-substring-without-repeating-characters
+Array Manipulation,Advanced Array Problems,Hard,Median of Two Sorted Arrays,https://leetcode.com/problems/median-of-two-sorted-arrays
+Array Manipulation,Advanced Array Problems,Hard *,Insert Interval,https://leetcode.com/problems/insert-interval
+Binary Search,Basic Binary Search,Easy,Search Insert Position,https://leetcode.com/problems/search-insert-position
+Binary Search,Basic Binary Search,Medium,Find First and Last Position of Element,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array
+Binary Search,Basic Binary Search,Medium,Search in Rotated Sorted Array,https://leetcode.com/problems/search-in-rotated-sorted-array
+Binary Search,Basic Binary Search,Medium,Find Peak Element,https://leetcode.com/problems/find-peak-element
+Binary Search,Basic Binary Search,Medium,Find Minimum in Rotated Sorted Array,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
+Binary Search,Basic Binary Search,Hard *,Find in Mountain Array,https://leetcode.com/problems/find-in-mountain-array
+Binary Search,Basic Binary Search,Medium *,Search in Rotated Sorted Array II,https://leetcode.com/problems/search-in-rotated-sorted-array-ii
+Binary Search,Basic Binary Search,Hard *,Find Minimum in Rotated Sorted Array II,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii
+Binary Search,Basic Binary Search,Medium *,Peak Index in a Mountain Array,https://leetcode.com/problems/peak-index-in-a-mountain-array
+Binary Search,Basic Binary Search,Medium *,H-Index II,https://leetcode.com/problems/h-index-ii
+Binary Search,Search in Answer Space,Medium,Koko Eating Bananas,https://leetcode.com/problems/koko-eating-bananas
+Binary Search,Search in Answer Space,Medium,Minimum Days to Make M Bouquets,https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets
+Binary Search,Search in Answer Space,Medium,Smallest Divisor Given Threshold,https://leetcode.com/problems/smallest-divisor-given-a-threshold
+Binary Search,Search in Answer Space,Medium,Capacity to Ship Packages in D Days,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days
+Binary Search,Search in Answer Space,Hard *,Split Array Largest Sum,https://leetcode.com/problems/split-array-largest-sum
+Binary Search,Advanced Binary Search,Hard,Median of Two Sorted Arrays,https://leetcode.com/problems/median-of-two-sorted-arrays
+Binary Search,Advanced Binary Search,Medium *,Heaters,https://leetcode.com/problems/heaters
+Binary Search,Advanced Binary Search,Hard *,Meeting Rooms III,https://leetcode.com/problems/meeting-rooms-iii
+Binary Search,Advanced Binary Search,Hard *,Minimize Max Distance to Gas Station,https://leetcode.com/problems/minimize-max-distance-to-gas-station
+String Manipulation,Basic String Operations,Easy,Reverse String,https://leetcode.com/problems/reverse-string
+String Manipulation,Basic String Operations,Easy,Valid Palindrome,https://leetcode.com/problems/valid-palindrome
+String Manipulation,Basic String Operations,Easy,Valid Anagram,https://leetcode.com/problems/valid-anagram
+String Manipulation,Basic String Operations,Easy,Longest Common Prefix,https://leetcode.com/problems/longest-common-prefix
+String Manipulation,Basic String Operations,Easy *,Implement strStr(),https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
+String Manipulation,Basic String Operations,Medium *,String to Integer (atoi),https://leetcode.com/problems/string-to-integer-atoi
+String Manipulation,Basic String Operations,Medium *,Longest Palindromic Substring,https://leetcode.com/problems/longest-palindromic-substring
+String Manipulation,Basic String Operations,Medium *,Zigzag Conversion,https://leetcode.com/problems/zigzag-conversion
+String Manipulation,Basic String Operations,Medium *,Group Anagrams,https://leetcode.com/problems/group-anagrams
+String Manipulation,String Algorithms,Hard,Minimum Window Substring,https://leetcode.com/problems/minimum-window-substring
+String Manipulation,String Algorithms,Medium,Group Anagrams,https://leetcode.com/problems/group-anagrams
+String Manipulation,String Algorithms,Hard *,Wildcard Matching,https://leetcode.com/problems/wildcard-matching
+String Manipulation,String Algorithms,Hard *,Regular Expression Matching,https://leetcode.com/problems/regular-expression-matching
+String Manipulation,String Algorithms,Hard *,Word Ladder,https://leetcode.com/problems/word-ladder
+String Manipulation,String Algorithms,Medium *,Find All Anagrams in a String,https://leetcode.com/problems/find-all-anagrams-in-a-string
+String Manipulation,String Algorithms,Medium *,Longest Palindromic Subsequence,https://leetcode.com/problems/longest-palindromic-subsequence
+String Manipulation,Advanced String Problems,Hard,Edit Distance,https://leetcode.com/problems/edit-distance
+String Manipulation,Advanced String Problems,Hard,Distinct Subsequences,https://leetcode.com/problems/distinct-subsequences
+String Manipulation,Advanced String Problems,Hard,Wildcard Pattern Matching,https://leetcode.com/problems/wildcard-matching
+String Manipulation,Advanced String Problems,Hard *,Shortest Palindrome,https://leetcode.com/problems/shortest-palindrome
+String Manipulation,Advanced String Problems,Hard *,Palindrome Pairs,https://leetcode.com/problems/palindrome-pairs
+String Manipulation,Advanced String Problems,Hard *,Word Break II,https://leetcode.com/problems/word-break-ii
+String Manipulation,Advanced String Problems,Hard *,Substring with Concatenation of All Words,https://leetcode.com/problems/substring-with-concatenation-of-all-words
+String Manipulation,Advanced String Problems,Medium *,Longest Palindromic Substring,https://leetcode.com/problems/longest-palindromic-substring
+Linked List Operations,Basic Linked List Operations,Easy,Reverse Linked List,https://leetcode.com/problems/reverse-linked-list
+Linked List Operations,Basic Linked List Operations,Easy,Middle of the Linked List,https://leetcode.com/problems/middle-of-the-linked-list
+Linked List Operations,Basic Linked List Operations,Easy,Linked List Cycle,https://leetcode.com/problems/linked-list-cycle
+Linked List Operations,Basic Linked List Operations,Medium *,Delete Node in a Linked List,https://leetcode.com/problems/delete-node-in-a-linked-list
+Linked List Operations,Basic Linked List Operations,Easy *,Remove Linked List Elements,https://leetcode.com/problems/remove-linked-list-elements
+Linked List Operations,Basic Linked List Operations,Medium *,Odd Even Linked List,https://leetcode.com/problems/odd-even-linked-list
+Linked List Operations,Basic Linked List Operations,Medium *,Reorder List,https://leetcode.com/problems/reorder-list
+Linked List Operations,Basic Linked List Operations,Medium *,Partition List,https://leetcode.com/problems/partition-list
+Linked List Operations,Two Pointers in Linked List,Medium,Remove Nth Node From End of List,https://leetcode.com/problems/remove-nth-node-from-end-of-list
+Linked List Operations,Two Pointers in Linked List,Easy,Intersection of Two Linked Lists,https://leetcode.com/problems/intersection-of-two-linked-lists
+Linked List Operations,Two Pointers in Linked List,Medium,Add Two Numbers,https://leetcode.com/problems/add-two-numbers
+Linked List Operations,Two Pointers in Linked List,Easy,Merge Two Sorted Lists,https://leetcode.com/problems/merge-two-sorted-lists
+Linked List Operations,Two Pointers in Linked List,Easy,Remove Duplicates from Sorted List,https://leetcode.com/problems/remove-duplicates-from-sorted-list
+Linked List Operations,Two Pointers in Linked List,Medium *,Linked List Cycle II,https://leetcode.com/problems/linked-list-cycle-ii
+Linked List Operations,Two Pointers in Linked List,Medium *,Swapping Nodes in a Linked List,https://leetcode.com/problems/swapping-nodes-in-a-linked-list
+Linked List Operations,Two Pointers in Linked List,Medium *,Rotate List,https://leetcode.com/problems/rotate-list
+Linked List Operations,Two Pointers in Linked List,Medium *,Swap Nodes in Pairs,https://leetcode.com/problems/swap-nodes-in-pairs
+Linked List Operations,Two Pointers in Linked List,Medium *,Reverse Linked List II,https://leetcode.com/problems/reverse-linked-list-ii
+Linked List Operations,Advanced Linked List Problems,Hard,Merge k Sorted Lists,https://leetcode.com/problems/merge-k-sorted-lists
+Linked List Operations,Advanced Linked List Problems,Hard,Reverse Nodes in k-Group,https://leetcode.com/problems/reverse-nodes-in-k-group
+Linked List Operations,Advanced Linked List Problems,Medium,Copy List with Random Pointer,https://leetcode.com/problems/copy-list-with-random-pointer
+Linked List Operations,Advanced Linked List Problems,Medium *,LRU Cache,https://leetcode.com/problems/lru-cache
+Recursion & Backtracking,Backtracking Problems,Medium,Permutations,https://leetcode.com/problems/permutations
+Recursion & Backtracking,Backtracking Problems,Medium,Combinations,https://leetcode.com/problems/combinations
+Recursion & Backtracking,Backtracking Problems,Medium,Combination Sum,https://leetcode.com/problems/combination-sum
+Recursion & Backtracking,Backtracking Problems,Medium,Combination Sum II,https://leetcode.com/problems/combination-sum-ii
+Recursion & Backtracking,Backtracking Problems,Medium,Subsets,https://leetcode.com/problems/subsets
+Recursion & Backtracking,Backtracking Problems,Medium,Word Search,https://leetcode.com/problems/word-search
+Recursion & Backtracking,Backtracking Problems,Medium,Generate Parentheses,https://leetcode.com/problems/generate-parentheses
+Recursion & Backtracking,Backtracking Problems,Medium *,Letter Combinations of a Phone Number,https://leetcode.com/problems/letter-combinations-of-a-phone-number
+Recursion & Backtracking,Backtracking Problems,Hard *,Word Search II,https://leetcode.com/problems/word-search-ii
+Recursion & Backtracking,Backtracking Problems,Medium *,Palindrome Partitioning,https://leetcode.com/problems/palindrome-partitioning
+Recursion & Backtracking,Backtracking Problems,Medium *,Combination Sum IV,https://leetcode.com/problems/combination-sum-iv
+Recursion & Backtracking,Backtracking Problems,Medium *,Restore IP Addresses,https://leetcode.com/problems/restore-ip-addresses
+Recursion & Backtracking,Complex Backtracking,Hard,N-Queens,https://leetcode.com/problems/n-queens
+Recursion & Backtracking,Complex Backtracking,Hard,Sudoku Solver,https://leetcode.com/problems/sudoku-solver
+Recursion & Backtracking,Complex Backtracking,Medium,Word Break,https://leetcode.com/problems/word-break
+Recursion & Backtracking,Complex Backtracking,Medium,Palindrome Partitioning,https://leetcode.com/problems/palindrome-partitioning
+Recursion & Backtracking,Complex Backtracking,Hard *,N-Queens II,https://leetcode.com/problems/n-queens-ii
+Recursion & Backtracking,Complex Backtracking,Hard *,Sliding Puzzle,https://leetcode.com/problems/sliding-puzzle
+Recursion & Backtracking,Complex Backtracking,Hard *,Word Break II,https://leetcode.com/problems/word-break-ii
+Recursion & Backtracking,Complex Backtracking,Hard *,Remove Invalid Parentheses,https://leetcode.com/problems/remove-invalid-parentheses
+Recursion & Backtracking,Complex Backtracking,Hard *,Brace Expansion II,https://leetcode.com/problems/brace-expansion-ii
+Bit Manipulation,Basic Bit Operations,Easy,Power of Two,https://leetcode.com/problems/power-of-two
+Bit Manipulation,Basic Bit Operations,Easy,Number of 1 Bits,https://leetcode.com/problems/number-of-1-bits
+Bit Manipulation,Basic Bit Operations,Easy,Single Number,https://leetcode.com/problems/single-number
+Bit Manipulation,Basic Bit Operations,Medium *,Single Number II,https://leetcode.com/problems/single-number-ii
+Bit Manipulation,Basic Bit Operations,Medium *,Single Number III,https://leetcode.com/problems/single-number-iii
+Bit Manipulation,Basic Bit Operations,Easy *,Counting Bits,https://leetcode.com/problems/counting-bits
+Bit Manipulation,Intermediate Bit Problems,Medium,Single Number III,https://leetcode.com/problems/single-number-iii
+Bit Manipulation,Intermediate Bit Problems,Easy,Hamming Distance,https://leetcode.com/problems/hamming-distance
+Bit Manipulation,Intermediate Bit Problems,Medium,Maximum XOR of Two Numbers in an Array,https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array
+Bit Manipulation,Intermediate Bit Problems,Medium *,Total Hamming Distance,https://leetcode.com/problems/total-hamming-distance
+Bit Manipulation,Intermediate Bit Problems,Easy *,Binary Watch,https://leetcode.com/problems/binary-watch
+Bit Manipulation,Intermediate Bit Problems,Medium *,UTF-8 Validation,https://leetcode.com/problems/utf-8-validation
+Bit Manipulation,Intermediate Bit Problems,Medium *,Bitwise AND of Numbers Range,https://leetcode.com/problems/bitwise-and-of-numbers-range
+Stack & Queue,Basic Stack Operations,Easy,Implement Stack using Queues,https://leetcode.com/problems/implement-stack-using-queues
+Stack & Queue,Basic Stack Operations,Easy,Implement Queue using Stacks,https://leetcode.com/problems/implement-queue-using-stacks
+Stack & Queue,Basic Stack Operations,Easy,Valid Parentheses,https://leetcode.com/problems/valid-parentheses
+Stack & Queue,Basic Stack Operations,Medium *,Min Stack,https://leetcode.com/problems/min-stack
+Stack & Queue,Stack/Queue Applications,Easy,Next Greater Element,https://leetcode.com/problems/next-greater-element-i
+Stack & Queue,Stack/Queue Applications,Hard,Largest Rectangle in Histogram,https://leetcode.com/problems/largest-rectangle-in-histogram
+Stack & Queue,Stack/Queue Applications,Hard,Sliding Window Maximum,https://leetcode.com/problems/sliding-window-maximum
+Stack & Queue,Stack/Queue Applications,Medium,LRU Cache,https://leetcode.com/problems/lru-cache
+Stack & Queue,Stack/Queue Applications,Medium *,Next Greater Element II,https://leetcode.com/problems/next-greater-element-ii
+Stack & Queue,Stack/Queue Applications,Medium *,Daily Temperatures,https://leetcode.com/problems/daily-temperatures
+Stack & Queue,Stack/Queue Applications,Medium *,Asteroid Collision,https://leetcode.com/problems/asteroid-collision
+Stack & Queue,Stack/Queue Applications,Medium *,Design Circular Deque,https://leetcode.com/problems/design-circular-deque
+Stack & Queue,Stack/Queue Applications,Hard *,Maximum Frequency Stack,https://leetcode.com/problems/maximum-frequency-stack
+Stack & Queue,Advanced Stack/Queue Problems,Hard,Maximal Rectangle,https://leetcode.com/problems/maximal-rectangle
+Stack & Queue,Advanced Stack/Queue Problems,Medium,Min Stack,https://leetcode.com/problems/min-stack
+Stack & Queue,Advanced Stack/Queue Problems,Hard *,Largest Rectangle in Histogram,https://leetcode.com/problems/largest-rectangle-in-histogram
+Tree Algorithms,Basic Tree Operations,Easy,Maximum Depth of Binary Tree,https://leetcode.com/problems/maximum-depth-of-binary-tree
+Tree Algorithms,Basic Tree Operations,Easy,Diameter of Binary Tree,https://leetcode.com/problems/diameter-of-binary-tree
+Tree Algorithms,Basic Tree Operations,Easy,Balanced Binary Tree,https://leetcode.com/problems/balanced-binary-tree
+Tree Algorithms,Basic Tree Operations,Easy,Invert Binary Tree,https://leetcode.com/problems/invert-binary-tree
+Tree Algorithms,Basic Tree Operations,Easy *,Symmetric Tree,https://leetcode.com/problems/symmetric-tree
+Tree Algorithms,Basic Tree Operations,Easy *,Same Tree,https://leetcode.com/problems/same-tree
+Tree Algorithms,Basic Tree Operations,Medium *,Binary Tree Level Order Traversal,https://leetcode.com/problems/binary-tree-level-order-traversal
+Tree Algorithms,Basic Tree Operations,Medium *,Populating Next Right Pointers in Each Node,https://leetcode.com/problems/populating-next-right-pointers-in-each-node
+Tree Algorithms,Basic Tree Operations,Medium *,Validate Binary Search Tree,https://leetcode.com/problems/validate-binary-search-tree
+Tree Algorithms,Tree Properties & Algorithms,Medium,Lowest Common Ancestor of a Binary Tree,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree
+Tree Algorithms,Tree Properties & Algorithms,Easy,Path Sum,https://leetcode.com/problems/path-sum
+Tree Algorithms,Tree Properties & Algorithms,Medium,Path Sum II,https://leetcode.com/problems/path-sum-ii
+Tree Algorithms,Tree Properties & Algorithms,Medium,Construct Binary Tree from Preorder & Inorder,https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal
+Tree Algorithms,Tree Properties & Algorithms,Medium,Construct Binary Tree from Inorder & Postorder,https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal
+Tree Algorithms,Tree Properties & Algorithms,Hard,Serialize and Deserialize Binary Tree,https://leetcode.com/problems/serialize-and-deserialize-binary-tree
+Tree Algorithms,Tree Properties & Algorithms,Hard,Vertical Order Traversal of a Binary Tree,https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree
+Tree Algorithms,Tree Properties & Algorithms,Medium,Binary Tree Level Order Traversal,https://leetcode.com/problems/binary-tree-level-order-traversal
+Tree Algorithms,Tree Properties & Algorithms,Medium *,Binary Tree Zigzag Level Order Traversal,https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal
+Tree Algorithms,Tree Properties & Algorithms,Medium *,Populating Next Right Pointers in Each Node II,https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii
+Tree Algorithms,Tree Properties & Algorithms,Medium *,Flatten Binary Tree to Linked List,https://leetcode.com/problems/flatten-binary-tree-to-linked-list
+Tree Algorithms,Tree Properties & Algorithms,Medium *,Sum Root to Leaf Numbers,https://leetcode.com/problems/sum-root-to-leaf-numbers
+Tree Algorithms,Tree Properties & Algorithms,Medium *,Binary Tree Right Side View,https://leetcode.com/problems/binary-tree-right-side-view
+Tree Algorithms,Advanced Tree Problems,Hard,Binary Tree Maximum Path Sum,https://leetcode.com/problems/binary-tree-maximum-path-sum
+Tree Algorithms,Advanced Tree Problems,Hard,Recover Binary Search Tree,https://leetcode.com/problems/recover-binary-search-tree
+Tree Algorithms,Advanced Tree Problems,Medium,Count Complete Tree Nodes,https://leetcode.com/problems/count-complete-tree-nodes
+Tree Algorithms,Advanced Tree Problems,Hard,Binary Tree Cameras,https://leetcode.com/problems/binary-tree-cameras
+Tree Algorithms,Advanced Tree Problems,Medium *,Serialize and Deserialize BST,https://leetcode.com/problems/serialize-and-deserialize-bst
+Tree Algorithms,Advanced Tree Problems,Hard *,Sum of Distances in Tree,https://leetcode.com/problems/sum-of-distances-in-tree
+Tree Algorithms,Advanced Tree Problems,Medium *,Smallest Subtree with all Deepest Nodes,https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes
+Tree Algorithms,Advanced Tree Problems,Medium *,Binary Tree Coloring Game,https://leetcode.com/problems/binary-tree-coloring-game
+Tree Algorithms,Advanced Tree Problems,Hard *,Closest BST Value II,https://leetcode.com/problems/closest-binary-search-tree-value-ii
+Graph Algorithms,Basic Graph Concepts,Medium,Number of Connected Components in Undirected Graph,https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph
+Graph Algorithms,Graph Traversal Applications,Medium,Detect Cycle (Course Schedule),https://leetcode.com/problems/course-schedule
+Graph Algorithms,Graph Traversal Applications,Medium,Topological Sort (Course Schedule II),https://leetcode.com/problems/course-schedule-ii
+Graph Algorithms,Graph Traversal Applications,Medium,Shortest Path in Binary Matrix,https://leetcode.com/problems/shortest-path-in-binary-matrix
+Graph Algorithms,Graph Traversal Applications,Medium,Clone Graph,https://leetcode.com/problems/clone-graph
+Graph Algorithms,Graph Traversal Applications,Medium,Course Schedule,https://leetcode.com/problems/course-schedule
+Graph Algorithms,Graph Traversal Applications,Medium,Course Schedule II,https://leetcode.com/problems/course-schedule-ii
+Graph Algorithms,Graph Traversal Applications,Medium,Number of Islands,https://leetcode.com/problems/number-of-islands
+Graph Algorithms,Graph Traversal Applications,Medium *,Rotting Oranges,https://leetcode.com/problems/rotting-oranges
+Graph Algorithms,Graph Traversal Applications,Hard *,Shortest Path with Obstacles Elimination,https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination
+Graph Algorithms,Graph Traversal Applications,Medium *,Snakes and Ladders,https://leetcode.com/problems/snakes-and-ladders
+Graph Algorithms,Graph Traversal Applications,Hard *,Reconstruct Itinerary,https://leetcode.com/problems/reconstruct-itinerary
+Graph Algorithms,Graph Traversal Applications,Medium *,All Paths from Source to Target,https://leetcode.com/problems/all-paths-from-source-to-target
+Graph Algorithms,Advanced Graph Algorithms,Medium,Network Delay Time,https://leetcode.com/problems/network-delay-time
+Dynamic Programming,1D DP Problems,Easy,Climbing Stairs,https://leetcode.com/problems/climbing-stairs
+Dynamic Programming,1D DP Problems,Easy,Fibonacci Number,https://leetcode.com/problems/fibonacci-number
+Dynamic Programming,1D DP Problems,Medium,House Robber,https://leetcode.com/problems/house-robber
+Dynamic Programming,1D DP Problems,Medium,House Robber (Max Sum No Adjacent),https://leetcode.com/problems/house-robber
+Dynamic Programming,1D DP Problems,Medium,Coin Change II (Count Ways),https://leetcode.com/problems/coin-change-ii
+Dynamic Programming,1D DP Problems,Medium *,House Robber II,https://leetcode.com/problems/house-robber-ii
+Dynamic Programming,1D DP Problems,Medium *,Coin Change,https://leetcode.com/problems/coin-change
+Dynamic Programming,1D DP Problems,Medium *,Maximum Product Subarray,https://leetcode.com/problems/maximum-product-subarray
+Dynamic Programming,1D DP Problems,Medium *,Arithmetic Slices,https://leetcode.com/problems/arithmetic-slices
+Dynamic Programming,1D DP Problems,Medium *,Jump Game,https://leetcode.com/problems/jump-game
+Dynamic Programming,2D DP Problems,Medium,Unique Paths,https://leetcode.com/problems/unique-paths
+Dynamic Programming,2D DP Problems,Medium,Minimum Path Sum,https://leetcode.com/problems/minimum-path-sum
+Dynamic Programming,2D DP Problems,Medium,Longest Common Subsequence,https://leetcode.com/problems/longest-common-subsequence
+Dynamic Programming,2D DP Problems,Hard,Edit Distance,https://leetcode.com/problems/edit-distance
+Dynamic Programming,2D DP Problems,Medium,Partition Equal Subset Sum,https://leetcode.com/problems/partition-equal-subset-sum
+Dynamic Programming,2D DP Problems,Medium,Longest Palindromic Subsequence,https://leetcode.com/problems/longest-palindromic-subsequence
+Dynamic Programming,2D DP Problems,Hard *,Interleaving String,https://leetcode.com/problems/interleaving-string
+Dynamic Programming,2D DP Problems,Hard *,Palindrome Partitioning II,https://leetcode.com/problems/palindrome-partitioning-ii
+Dynamic Programming,2D DP Problems,Hard *,Burst Balloons,https://leetcode.com/problems/burst-balloons
+Dynamic Programming,2D DP Problems,Medium *,Unique Paths II,https://leetcode.com/problems/unique-paths-ii
+Dynamic Programming,2D DP Problems,Medium *,Minimum Falling Path Sum,https://leetcode.com/problems/minimum-falling-path-sum
+Dynamic Programming,Advanced DP Problems,Medium,Longest Increasing Subsequence,https://leetcode.com/problems/longest-increasing-subsequence
+Dynamic Programming,Advanced DP Problems,Hard,Burst Balloons,https://leetcode.com/problems/burst-balloons
+Dynamic Programming,Advanced DP Problems,Hard,Super Egg Drop,https://leetcode.com/problems/super-egg-drop
+Dynamic Programming,Advanced DP Problems,Hard *,Russian Doll Envelopes,https://leetcode.com/problems/russian-doll-envelopes
+Dynamic Programming,Advanced DP Problems,Hard *,Minimum Cost to Merge Stones,https://leetcode.com/problems/minimum-cost-to-merge-stones
+Dynamic Programming,Advanced DP Problems,Hard *,Edit Distance,https://leetcode.com/problems/edit-distance
+Greedy Algorithms,Basic Greedy Problems,Medium,Meeting Rooms II (Min Platforms),https://leetcode.com/problems/meeting-rooms-ii
+Greedy Algorithms,Basic Greedy Problems,Easy *,Assign Cookies,https://leetcode.com/problems/assign-cookies
+Greedy Algorithms,Basic Greedy Problems,Medium *,Gas Station,https://leetcode.com/problems/gas-station
+Greedy Algorithms,Basic Greedy Problems,Easy *,Lemonade Change,https://leetcode.com/problems/lemonade-change
+Greedy Algorithms,Basic Greedy Problems,Medium *,Queue Reconstruction by Height,https://leetcode.com/problems/queue-reconstruction-by-height
+Greedy Algorithms,Basic Greedy Problems,Medium *,Hand of Straights,https://leetcode.com/problems/hand-of-straights
+Greedy Algorithms,Intermediate Greedy,Medium,Minimum Number of Arrows to Burst Balloons,https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons
+Greedy Algorithms,Intermediate Greedy,Medium,Gas Station,https://leetcode.com/problems/gas-station
+Greedy Algorithms,Intermediate Greedy,Medium *,Two City Scheduling,https://leetcode.com/problems/two-city-scheduling
+Greedy Algorithms,Intermediate Greedy,Medium *,Jump Game II,https://leetcode.com/problems/jump-game-ii
+Greedy Algorithms,Intermediate Greedy,Hard *,Candy,https://leetcode.com/problems/candy
+Greedy Algorithms,Intermediate Greedy,Hard *,Trapping Rain Water,https://leetcode.com/problems/trapping-rain-water
+Greedy Algorithms,Intermediate Greedy,Medium *,Split Linked List in Parts,https://leetcode.com/problems/split-linked-list-in-parts
+Greedy Algorithms,Advanced Greedy Problems,Hard,Candy (Candy Distribution),https://leetcode.com/problems/candy
+Greedy Algorithms,Advanced Greedy Problems,Medium,Jump Game (I),https://leetcode.com/problems/jump-game
+Greedy Algorithms,Advanced Greedy Problems,Medium *,Jump Game III,https://leetcode.com/problems/jump-game-iii
+Greedy Algorithms,Advanced Greedy Problems,Hard *,Jump Game IV,https://leetcode.com/problems/jump-game-iv
+Heap/Priority Queue,Basic Heap Operations,Medium,Kth Largest Element in an Array,https://leetcode.com/problems/kth-largest-element-in-an-array
+Heap/Priority Queue,Basic Heap Operations,Easy *,Last Stone Weight,https://leetcode.com/problems/last-stone-weight
+Heap/Priority Queue,Basic Heap Operations,Medium *,Top K Frequent Elements,https://leetcode.com/problems/top-k-frequent-elements
+Heap/Priority Queue,Basic Heap Operations,Medium *,K Closest Points to Origin,https://leetcode.com/problems/k-closest-points-to-origin
+Heap/Priority Queue,Basic Heap Operations,Medium *,Sort Characters By Frequency,https://leetcode.com/problems/sort-characters-by-frequency
+Heap/Priority Queue,Basic Heap Operations,Medium *,Reorganize String,https://leetcode.com/problems/reorganize-string
+Heap/Priority Queue,Heap Applications,Medium,Top K Frequent Elements,https://leetcode.com/problems/top-k-frequent-elements
+Heap/Priority Queue,Heap Applications,Hard,Merge k Sorted Lists,https://leetcode.com/problems/merge-k-sorted-lists
+Heap/Priority Queue,Heap Applications,Hard,Find Median from Data Stream,https://leetcode.com/problems/find-median-from-data-stream
+Heap/Priority Queue,Heap Applications,Medium *,Task Scheduler,https://leetcode.com/problems/task-scheduler
+Heap/Priority Queue,Heap Applications,Hard *,Sliding Window Median,https://leetcode.com/problems/sliding-window-median
+Heap/Priority Queue,Heap Applications,Medium *,Design Twitter,https://leetcode.com/problems/design-twitter
+Heap/Priority Queue,Heap Applications,Hard *,IPO,https://leetcode.com/problems/ipo
+Heap/Priority Queue,Heap Applications,Medium *,Top K Frequent Words,https://leetcode.com/problems/top-k-frequent-words
+Heap/Priority Queue,Advanced Heap Problems,Hard,Sliding Window Median,https://leetcode.com/problems/sliding-window-median
+Heap/Priority Queue,Advanced Heap Problems,Hard,Employee Free Time,https://leetcode.com/problems/employee-free-time
+Heap/Priority Queue,Advanced Heap Problems,Hard *,The Skyline Problem,https://leetcode.com/problems/the-skyline-problem
+Heap/Priority Queue,Advanced Heap Problems,Easy *,Merge Sorted Array,https://leetcode.com/problems/merge-sorted-array
+Trie (Prefix Tree),Basic Trie Operations,Medium,Implement Trie (Prefix Tree),https://leetcode.com/problems/implement-trie-prefix-tree
+Trie (Prefix Tree),Basic Trie Operations,Medium,Add and Search Word,https://leetcode.com/problems/add-and-search-word-data-structure-design
+Trie (Prefix Tree),Basic Trie Operations,Hard,Prefix and Suffix Search,https://leetcode.com/problems/prefix-and-suffix-search
+Trie (Prefix Tree),Basic Trie Operations,Medium *,Implement Magic Dictionary,https://leetcode.com/problems/implement-magic-dictionary
+Trie (Prefix Tree),Basic Trie Operations,Medium *,Design Add and Search Words,https://leetcode.com/problems/design-add-and-search-words-data-structure
+Trie (Prefix Tree),Trie Applications,Hard,Word Search II,https://leetcode.com/problems/word-search-ii
+Trie (Prefix Tree),Trie Applications,Medium,Replace Words,https://leetcode.com/problems/replace-words
+Trie (Prefix Tree),Trie Applications,Medium,Maximum XOR of Two Numbers in an Array,https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array
+Trie (Prefix Tree),Trie Applications,Medium *,Map Sum Pairs,https://leetcode.com/problems/map-sum-pairs
+Trie (Prefix Tree),Trie Applications,Hard *,Concatenated Words,https://leetcode.com/problems/concatenated-words
+Trie (Prefix Tree),Advanced Trie Problems,Hard,Palindrome Pairs,https://leetcode.com/problems/palindrome-pairs
+Trie (Prefix Tree),Advanced Trie Problems,Hard,Stream of Characters,https://leetcode.com/problems/stream-of-characters
+Trie (Prefix Tree),Advanced Trie Problems,Hard *,Word Squares,https://leetcode.com/problems/word-squares
+Trie (Prefix Tree),Advanced Trie Problems,Hard *,Design Search Autocomplete System,https://leetcode.com/problems/design-search-autocomplete-system
+Trie (Prefix Tree),Advanced Trie Problems,Medium *,Search Suggestions System,https://leetcode.com/problems/search-suggestions-system
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------,,,,
+Arrays,Prefix Sum,Easy,https://codeforces.com/problemset/problem/1343/C,https://codeforces.com/problemset/problem/1343/C
+Arrays,Prefix Sum,Hard,https://codeforces.com/problemset/problem/1077/D,https://codeforces.com/problemset/problem/1077/D
+Arrays,Two Pointers,Medium,https://codeforces.com/problemset/problem/1132/C,https://codeforces.com/problemset/problem/1132/C
+Arrays,Two Pointers,Hard,https://codeforces.com/problemset/problem/1157/E,https://codeforces.com/problemset/problem/1157/E
+Binary Search,Binary Search,Easy,https://codeforces.com/problemset/problem/1105/B,https://codeforces.com/problemset/problem/1105/B
+Binary Search,Binary Search,Hard,https://codeforces.com/problemset/problem/1557/B,https://codeforces.com/problemset/problem/1557/B
+Sorting,Custom Sort,Medium,https://codeforces.com/problemset/problem/1385/C,https://codeforces.com/problemset/problem/1385/C
+Sorting,Custom Sort,Hard,https://codeforces.com/problemset/problem/1422/D,https://codeforces.com/problemset/problem/1422/D
+Greedy,Classic Greedy,Medium,https://codeforces.com/problemset/problem/1370/C,https://codeforces.com/problemset/problem/1370/C
+Greedy,Classic Greedy,Hard,https://codeforces.com/problemset/problem/1354/E,https://codeforces.com/problemset/problem/1354/E
+Hashing,Frequency Map,Medium,https://codeforces.com/problemset/problem/1296/D,https://codeforces.com/problemset/problem/1296/D
+Hashing,Frequency Map,Hard,https://codeforces.com/problemset/problem/932/B,https://codeforces.com/problemset/problem/932/B
+Strings,Palindrome Check,Easy,https://codeforces.com/problemset/problem/1321/A,https://codeforces.com/problemset/problem/1321/A
+Strings,Palindrome Check,Hard,https://codeforces.com/problemset/problem/1328/D,https://codeforces.com/problemset/problem/1328/D
+Strings,String Matching,Medium,https://codeforces.com/problemset/problem/1146/D,https://codeforces.com/problemset/problem/1146/D
+Strings,String Matching,Hard,https://codeforces.com/problemset/problem/1110/D,https://codeforces.com/problemset/problem/1110/D
+Mathematics,Number Theory,Medium,https://codeforces.com/problemset/problem/1272/C,https://codeforces.com/problemset/problem/1272/C
+Mathematics,Number Theory,Hard,https://codeforces.com/problemset/problem/1371/D,https://codeforces.com/problemset/problem/1371/D
+Mathematics,Bit Manipulation,Medium,https://codeforces.com/problemset/problem/1352/D,https://codeforces.com/problemset/problem/1352/D
+Mathematics,Bit Manipulation,Hard,https://codeforces.com/problemset/problem/1385/F,https://codeforces.com/problemset/problem/1385/F
+2 Pointers,Sliding Window,Medium,https://codeforces.com/problemset/problem/1167/C,https://codeforces.com/problemset/problem/1167/C
+2 Pointers,Sliding Window,Hard,https://codeforces.com/problemset/problem/1322/B,https://codeforces.com/problemset/problem/1322/B
+Recursion/Backtracking,Subset Generation,Easy,https://codeforces.com/problemset/problem/1036/D,https://codeforces.com/problemset/problem/1036/D
+Recursion/Backtracking,Subset Generation,Hard,https://codeforces.com/problemset/problem/1372/B,https://codeforces.com/problemset/problem/1372/B
+Trees/Graphs,DFS,Medium,https://codeforces.com/problemset/problem/1324/D,https://codeforces.com/problemset/problem/1324/D
+Trees/Graphs,DFS,Hard,https://codeforces.com/problemset/problem/1201/D,https://codeforces.com/problemset/problem/1201/D
+Trees/Graphs,BFS,Medium,https://codeforces.com/problemset/problem/1284/B,https://codeforces.com/problemset/problem/1284/B
+Trees/Graphs,BFS,Hard,https://codeforces.com/problemset/problem/1163/D,https://codeforces.com/problemset/problem/1163/D
+Trees/Graphs,Tree Queries,Hard,https://codeforces.com/problemset/problem/1348/B,https://codeforces.com/problemset/problem/1348/B
+Dynamic Programming,DP on Arrays,Easy,https://codeforces.com/problemset/problem/1350/A,https://codeforces.com/problemset/problem/1350/A
+Dynamic Programming,DP on Arrays,Medium,https://codeforces.com/problemset/problem/1183/D,https://codeforces.com/problemset/problem/1183/D
+Dynamic Programming,DP on Arrays,Hard,https://codeforces.com/problemset/problem/1095/D,https://codeforces.com/problemset/problem/1095/D
+Dynamic Programming,Knapsack,Hard,https://codeforces.com/problemset/problem/1370/E,https://codeforces.com/problemset/problem/1370/E
+Dynamic Programming,Subset Sum,Hard,https://codeforces.com/problemset/problem/1368/C,https://codeforces.com/problemset/problem/1368/C
+Math/Combinatorics,Modular Arithmetic,Medium,https://codeforces.com/problemset/problem/1325/E,https://codeforces.com/problemset/problem/1325/E
+Math/Combinatorics,Modular Arithmetic,Hard,https://codeforces.com/problemset/problem/1304/E,https://codeforces.com/problemset/problem/1304/E
+Binary Search,Lower Bound,Hard,https://codeforces.com/problemset/problem/1400/C,https://codeforces.com/problemset/problem/1400/C
+Graph Algorithms,Dijkstra/Shortest Path,Hard,https://codeforces.com/problemset/problem/1197/C,https://codeforces.com/problemset/problem/1197/C
+Graph Algorithms,Spanning Trees,Hard,https://codeforces.com/problemset/problem/1294/D,https://codeforces.com/problemset/problem/1294/D
+Flow/Matching,Maximum Flow,Hard,https://codeforces.com/problemset/problem/1253/E,https://codeforces.com/problemset/problem/1253/E
+Arrays,Prefix Sum,Hard,https://codeforces.com/problemset/problem/1324/C,https://codeforces.com/problemset/problem/1324/C
+Arrays,Prefix Sum,Hard,https://codeforces.com/problemset/problem/1243/B2,https://codeforces.com/problemset/problem/1243/B2
+Arrays,Two Pointers,Hard,https://codeforces.com/problemset/problem/1312/D,https://codeforces.com/problemset/problem/1312/D
+Arrays,Two Pointers,Hard,https://codeforces.com/problemset/problem/1272/E,https://codeforces.com/problemset/problem/1272/E
+Binary Search,Binary Search,Hard,https://codeforces.com/problemset/problem/1234/C,https://codeforces.com/problemset/problem/1234/C
+Binary Search,Binary Search,Hard,https://codeforces.com/problemset/problem/1261/A,https://codeforces.com/problemset/problem/1261/A
+Sorting,Custom Sort,Hard,https://codeforces.com/problemset/problem/1307/D,https://codeforces.com/problemset/problem/1307/D
+Sorting,Custom Sort,Hard,https://codeforces.com/problemset/problem/1237/B,https://codeforces.com/problemset/problem/1237/B
+Greedy,Classic Greedy,Hard,https://codeforces.com/problemset/problem/1364/C,https://codeforces.com/problemset/problem/1364/C
+Greedy,Classic Greedy,Hard,https://codeforces.com/problemset/problem/1372/C,https://codeforces.com/problemset/problem/1372/C
+Strings,Palindrome Check,Hard,https://codeforces.com/problemset/problem/1381/B,https://codeforces.com/problemset/problem/1381/B
+Strings,Palindrome Check,Hard,https://codeforces.com/problemset/problem/1288/D,https://codeforces.com/problemset/problem/1288/D
+Strings,String Matching,Hard,https://codeforces.com/problemset/problem/1290/C,https://codeforces.com/problemset/problem/1290/C
+Strings,String Matching,Hard,https://codeforces.com/problemset/problem/1354/G,https://codeforces.com/problemset/problem/1354/G
+Mathematics,Number Theory,Hard,https://codeforces.com/problemset/problem/1285/E,https://codeforces.com/problemset/problem/1285/E
+Mathematics,Number Theory,Hard,https://codeforces.com/problemset/problem/1307/B,https://codeforces.com/problemset/problem/1307/B
+Mathematics,Bit Manipulation,Hard,https://codeforces.com/problemset/problem/1349/B,https://codeforces.com/problemset/problem/1349/B
+Mathematics,Bit Manipulation,Hard,https://codeforces.com/problemset/problem/1238/D,https://codeforces.com/problemset/problem/1238/D
+Two Pointers,Sliding Window,Hard,https://codeforces.com/problemset/problem/1263/D,https://codeforces.com/problemset/problem/1263/D
+Two Pointers,Sliding Window,Hard,https://codeforces.com/problemset/problem/1343/F,https://codeforces.com/problemset/problem/1343/F
+Recursion/Backtracking,Subset Generation,Hard,https://codeforces.com/problemset/problem/1282/B2,https://codeforces.com/problemset/problem/1282/B2
+Recursion/Backtracking,Subset Generation,Hard,https://codeforces.com/problemset/problem/1353/F,https://codeforces.com/problemset/problem/1353/F
+Trees/Graphs,DFS,Hard,https://codeforces.com/problemset/problem/1369/D,https://codeforces.com/problemset/problem/1369/D
+Trees/Graphs,DFS,Hard,https://codeforces.com/problemset/problem/1355/E,https://codeforces.com/problemset/problem/1355/E
+Trees/Graphs,BFS,Hard,https://codeforces.com/problemset/problem/1392/F,https://codeforces.com/problemset/problem/1392/F
+Trees/Graphs,BFS,Hard,https://codeforces.com/problemset/problem/1321/B,https://codeforces.com/problemset/problem/1321/B
+Trees/Graphs,Tree Queries,Hard,https://codeforces.com/problemset/problem/1332/F,https://codeforces.com/problemset/problem/1332/F
+Dynamic Programming,DP on Arrays,Hard,https://codeforces.com/problemset/problem/1323/D,https://codeforces.com/problemset/problem/1323/D
+Dynamic Programming,DP on Arrays,Hard,https://codeforces.com/problemset/problem/1342/B,https://codeforces.com/problemset/problem/1342/B
+Dynamic Programming,Knapsack,Hard,https://codeforces.com/problemset/problem/1309/B,https://codeforces.com/problemset/problem/1309/B
+Dynamic Programming,Subset Sum,Hard,https://codeforces.com/problemset/problem/1325/F,https://codeforces.com/problemset/problem/1325/F
+Math/Combinatorics,Modular Arithmetic,Hard,https://codeforces.com/problemset/problem/1350/C,https://codeforces.com/problemset/problem/1350/C
+Binary Search,Lower Bound,Hard,https://codeforces.com/problemset/problem/1301/B,https://codeforces.com/problemset/problem/1301/B
+Graph Algorithms,Dijkstra/Shortest Path,Hard,https://codeforces.com/problemset/problem/1320/D,https://codeforces.com/problemset/problem/1320/D
+Graph Algorithms,Spanning Trees,Hard,https://codeforces.com/problemset/problem/1358/E,https://codeforces.com/problemset/problem/1358/E
+Flow/Matching,Maximum Flow,Hard,https://codeforces.com/problemset/problem/1373/D,https://codeforces.com/problemset/problem/1373/D
+Flow/Matching,Maximum Flow,Hard,https://codeforces.com/problemset/problem/1264/D,https://codeforces.com/problemset/problem/1264/D
