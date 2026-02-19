@@ -1,0 +1,17 @@
+[project]
+name = "project1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "baml-py==0.218.0",
+    "docling>=2.66.0",
+    "langchain>=1.2.0",
+    "langgraph>=1.0.5",
+    "pandas>=2.3.3",
+    "pdfplumber>=0.11.8",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.1",
+    "tabula>=1.0.5",
+]
