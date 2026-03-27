@@ -2,7 +2,7 @@
 
 A two-part AI interviewing system for end-to-end technical interview practice:
 
-1. **SIP_Interview Agent** (Python) — Deep-dives into your resume projects using an AI agent (LangGraph + BAML)
+1. **SIP_Interview_Agent** (Python) — Deep-dives into your resume projects using an AI agent (LangGraph + BAML)
 2. **DSA_Agent** (Node.js) — Runs a structured DSA/LeetCode-style coding interview
 
 ---
@@ -27,10 +27,10 @@ node server.js
 # → 🚀 AI Interview Bot running on port 3000
 ```
 
-### 2. SIP_Interview Agent (Python)
+### 2. SIP_Interview_Agent (Python)
 
 ```bash
-cd "SIP_Interview Agent"
+cd SIP_Interview_Agent
 ```
 
 Create `.env`:
@@ -52,7 +52,7 @@ uv sync
 > Make sure `node server.js` is running first in `DSA_Agent/`
 
 ```bash
-cd "SIP_Interview Agent"
+cd SIP_Interview_Agent
 uv run python arch.py
 ```
 
@@ -64,7 +64,7 @@ Flow:
 ### DSA Interview Only (from Python)
 
 ```bash
-cd "SIP_Interview Agent"
+cd SIP_Interview_Agent
 uv run python dsa_client.py
 ```
 
@@ -99,7 +99,7 @@ Show Question → Approach → Evaluate → Pseudocode → Code → Dry Run → 
 Projects/
 ├── README.md
 │
-├── SIP_Interview Agent/        # Python — resume/project interview bot
+├── SIP_Interview_Agent/        # Python — resume/project interview bot
 │   ├── arch.py                 # Main LangGraph interview agent
 │   ├── dsa_client.py           # HTTP client → calls DSA_Agent API
 │   ├── resumeMD.py             # Resume PDF → Markdown converter
