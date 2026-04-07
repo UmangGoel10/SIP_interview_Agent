@@ -75,7 +75,6 @@ class DSABotClient:
             return
 
         print(f"\n{data.get('reply', '')}\n")
-        current_stage = data.get("stage")
 
         # The first /start already moves us into SHOW_QUESTION.
         # We now need to POST /chat to get the actual problem shown.

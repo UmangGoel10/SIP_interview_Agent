@@ -1,7 +1,6 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const { v4: uuidv4 } = require("uuid");
 
 const { loadQuestionsFromCSV } = require("./modules/questions");
@@ -18,7 +17,7 @@ const { handleUserTestcase } = require("./stages/userTestcase");
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Load CSV once at startup
 (async () => {
